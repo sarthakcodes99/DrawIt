@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawIt - Let's Draw!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="tool-bar flex items-center justify-between m-[5px] w-[99%] h-[50px] rounded-lg">
+            <div class="tools flex gap-4 p-4">
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#FF0000] cursor-pointer" data-color="#FF0000"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#0000FF] cursor-pointer" data-color="#0000FF"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#00FF00] cursor-pointer" data-color="#00FF00"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#FFFF00] cursor-pointer" data-color="#FFFF00"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#800080] cursor-pointer" data-color="#800080"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#EE82EE] cursor-pointer" data-color="#EE82EE"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#808080] cursor-pointer" data-color="#808080"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#A8E6CF] cursor-pointer" data-color="#A8E6CF"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#E1BEE7] cursor-pointer" data-color="#E1BEE7"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#FFD3B6] cursor-pointer" data-color="#FFD3B6"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#FF8B94] cursor-pointer" data-color="#FF8B94"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#008080] cursor-pointer" data-color="#008080"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#1A237E] cursor-pointer" data-color="#1A237E"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#1B5E20] cursor-pointer" data-color="#1B5E20"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#00FF66] cursor-pointer" data-color="#00FF66"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#FF007F] cursor-pointer" data-color="#FF007F"></div>
+                <div class="color h-[25px] w-[25px] rounded-[50%] border-[2px] border-black bg-[#00F0FF] cursor-pointer" data-color="#00F0FF"></div>
+                <div id="PenBtn" class="pen cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="">
+<path d="M15.4998 5.49994L18.3282 8.32837M3 20.9997L3.04745 20.6675C3.21536 19.4922 3.29932 18.9045 3.49029 18.3558C3.65975 17.8689 3.89124 17.4059 4.17906 16.9783C4.50341 16.4963 4.92319 16.0765 5.76274 15.237L17.4107 3.58896C18.1918 2.80791 19.4581 2.80791 20.2392 3.58896C21.0202 4.37001 21.0202 5.63634 20.2392 6.41739L8.37744 18.2791C7.61579 19.0408 7.23497 19.4216 6.8012 19.7244C6.41618 19.9932 6.00093 20.2159 5.56398 20.3879C5.07171 20.5817 4.54375 20.6882 3.48793 20.9012L3 20.9997Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+            </div>
+                
+                <div class="m-4">
+                    <button id="ResetBtn" class="h-[35px] w-[100px] border-2 border-black rounded-s bg-red-600 text-white transform transition-transform duration-200 hover:scale-105">Reset</button>
+                </div>
+        </div>
+    </nav>
+    <main>
+        <canvas id="canvas"></canvas>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
