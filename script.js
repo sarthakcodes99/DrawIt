@@ -20,7 +20,7 @@ colorSwatches.forEach((swatch)=>{
     swatch.addEventListener("click", (colorname)=>{
         let currentColor = swatch.getAttribute("data-color")
         CurrentBrushColor = currentColor
-        CurrentBrushWidth = 25
+        CurrentBrushWidth = 30
         IsPenActive = true
     })
 })
